@@ -1,0 +1,140 @@
+/* ========== GLOBAL STYLES ========== */
+body {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Navbar logo circle */
+.logo-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007bff, #0d6efd);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Card tweaks */
+.card {
+  border: none;
+  border-radius: 1rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0.5rem;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+}
+
+/* ========== CAMERA STYLES ========== */
+.camera-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+video {
+  width: 320px;
+  height: 240px;
+  background-color: #000;
+  object-fit: cover;
+}
+
+.camera-large {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #dee2e6;
+}
+
+/* Camera status overlay */
+.camera-status {
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+/* Thumbnail previews */
+#thumbs img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  transition: transform 0.2s ease-in-out;
+}
+
+#thumbs img:hover {
+  transform: scale(1.1);
+  border-color: #0d6efd;
+}
+
+/* ========== ATTENDANCE PAGE STYLES ========== */
+#recognized {
+  font-weight: 600;
+  color: #0d6efd;
+  text-transform: capitalize;
+}
+
+#info {
+  min-height: 20px;
+}
+
+#confidenceBar {
+  transition: width 0.4s ease;
+}
+
+/* Counter box */
+#counterBox {
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.15);
+}
+
+/* Table tweaks */
+table th,
+table td {
+  vertical-align: middle;
+}
+
+/* SweetAlert custom style (optional tweak) */
+.swal2-popup {
+  border-radius: 16px !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  #thumbs img {
+    width: 60px;
+    height: 45px;
+  }
+
+  .camera-large {
+    max-width: 100%;
+  }
+}
