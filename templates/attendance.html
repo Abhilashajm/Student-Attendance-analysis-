@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-body d-flex flex-column align-items-center">
+        <h5>Live Camera</h5>
+        <div class="alert alert-info w-100 text-center mb-3" id="counterBox">
+       🧑‍🎓 <strong id="presentCount">0</strong> students marked present today
+        </div>
+
+        <video id="video" autoplay muted playsinline class="rounded camera-large"></video>
+        <div class="mt-3 d-flex gap-2">
+          <button id="startBtn" class="btn btn-primary">Start</button>
+          <button id="stopBtn" class="btn btn-secondary">Stop</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5>Recognition</h5>
+        <div class="mb-2">
+          <div class="fw-semibold">Recognized:</div>
+          <div id="recognized" class="fs-4 text-truncate">None</div>
+        </div>
+        <div class="mb-2">
+          <div class="fw-semibold">Confidence</div>
+          <div class="progress" style="height:18px;">
+            <div id="confidenceBar" class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
+          </div>
+        </div>
+        <div id="info" class="small text-muted"></div>
+        <div class="mt-3">
+          <button id="logoutBtn" class="btn btn-outline-danger" disabled><i class="bi bi-box-arrow-right"></i> Manual Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/static/attendance.js"></script>
+{% endblock %}

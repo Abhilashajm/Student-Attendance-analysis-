@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row g-4">
+  <div class="col-md-3">
+    <div class="card shadow-sm border-start border-primary border-3">
+      <div class="card-body text-center">
+        <h6 class="text-muted mb-1">Total Registered</h6>
+        <h3 class="fw-bold text-primary">{{ total_registered }}</h3>
+        <i class="bi bi-person-lines-fill fs-3 text-primary"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card shadow-sm border-start border-success border-3">
+      <div class="card-body text-center">
+        <h6 class="text-muted mb-1">Present Today</h6>
+        <h3 class="fw-bold text-success">{{ present_today }}</h3>
+        <i class="bi bi-check-circle-fill fs-3 text-success"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card shadow-sm border-start border-danger border-3">
+      <div class="card-body text-center">
+        <h6 class="text-muted mb-1">Absent Today</h6>
+        <h3 class="fw-bold text-danger">{{ absent_today }}</h3>
+        <i class="bi bi-x-circle-fill fs-3 text-danger"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card shadow-sm border-start border-warning border-3">
+      <div class="card-body text-center">
+        <h6 class="text-muted mb-1">Last Attendance Time</h6>
+        <h5 class="fw-bold text-warning">{{ last_attendance_time }}</h5>
+        <i class="bi bi-clock-history fs-3 text-warning"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-5 text-center">
+  <a href="/attendance" class="btn btn-primary me-2"><i class="bi bi-camera-video"></i> Take Attendance</a>
+  <a href="/reports" class="btn btn-outline-secondary"><i class="bi bi-table"></i> View Reports</a>
+</div>
+{% endblock %}

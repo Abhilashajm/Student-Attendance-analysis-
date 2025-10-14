@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>Attendance Reports</h4>
+      <a class="btn btn-outline-primary" href="/export_csv"><i class="bi bi-download"></i> Export CSV</a>
+    </div>
+    <div class="table-responsive mt-3">
+      <table class="table table-striped table-hover">
+        <thead class="table-primary">
+          <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Section</th>
+            <th>Room</th>
+            <th>Login</th>
+            <th>Logout</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+          <tr>
+            <td>{{row.student_id}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.course}}</td>
+            <td>{{row.section}}</td>
+            <td>{{row.room}}</td>
+            <td>{{row.login_date}} {{row.login_time}}</td>
+            <td>{{row.logout_date}} {{row.logout_time}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% if not rows %}
+      <div class="text-center text-muted mt-3">No attendance records yet.</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+<a href="/registered" class="btn btn-outline-secondary float-end btn-sm"><i class="bi bi-list"></i> View Registered</a>
+
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h4 class="card-title">Enroll Student (3–5 images)</h4>
+    <form id="enrollForm" class="row g-3">
+      <div class="col-md-2">
+        <input id="student_id" type="number" class="form-control" placeholder="ID" required>
+      </div>
+      <div class="col-md-4">
+        <input id="name" type="text" class="form-control" placeholder="Full name" required>
+      </div>
+      <div class="col-md-2">
+        <input id="course" type="text" class="form-control" placeholder="Course">
+      </div>
+      <div class="col-md-2">
+        <input id="section" type="text" class="form-control" placeholder="Section">
+      </div>
+      <div class="col-md-2">
+        <input id="room" type="text" class="form-control" placeholder="Room">
+      </div>
+      <div class="col-12 mt-2 d-flex gap-2 align-items-start">
+        <div class="camera-wrap position-relative">
+          <video id="video" autoplay muted playsinline class="rounded shadow-sm border"></video>
+          <div id="cameraStatus" class="camera-status">Idle</div>
+        </div>
+        <div class="flex-grow-1">
+          <div class="mb-2">
+            <button id="startCapture" type="button" class="btn btn-success btn-sm me-1">Start Camera</button>
+            <button id="stopCapture" type="button" class="btn btn-secondary btn-sm me-1">Stop</button>
+            <button id="takeBtn" type="button" class="btn btn-primary btn-sm me-1">Capture</button>
+            <span class="badge bg-info" id="countSpan">0 images</span>
+          </div>
+          <div id="thumbs" class="d-flex flex-wrap"></div>
+          <div class="mt-3">
+            <button id="enrollBtn" type="button" class="btn btn-lg btn-primary">Enroll Student</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="/static/enroll.js"></script>
+{% endblock %}

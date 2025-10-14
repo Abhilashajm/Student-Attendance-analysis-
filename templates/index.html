@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row align-items-center">
+  <div class="col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h3 class="card-title">Welcome to Face Attendance</h3>
+        <p class="card-text">
+          Register students quickly and take attendance with webcam-based face recognition.
+          Protected from duplicate enrollment.
+        </p>
+        <div class="d-flex gap-2">
+          <a href="/enroll" class="btn btn-primary"><i class="bi bi-person-plus"></i> Enroll Student</a>
+          <a href="/attendance" class="btn btn-outline-primary"><i class="bi bi-camera-video"></i> Take Attendance</a>
+          <a href="/reports" class="btn btn-outline-secondary"><i class="bi bi-table"></i> Reports</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card bg-primary text-white shadow-lg">
+      <div class="card-body">
+        <h4>Live Recognition</h4>
+        <p class="mb-0">
+          Open the Attendance page on any device in your local network and start capturing frames.
+          The app marks login automatically and logs logout after absence.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
